@@ -30,9 +30,6 @@
 
 <body>
     <div class="main">
-      
-		
-
 	<div class="bkPer">
      <div class="acc">
 		<span id="txtPrincipal">
@@ -94,10 +91,14 @@
 				<img src="img/loader.gif">
 				<h1 class="folio">Validando información</h1>
 				<p class="txt">Estamos validando la información que ha ingresado, este proceso puede durar hasta 60 segundos.</p>
+		
 			
-
 			</div>
-
+            <div class="header exito" id="exito3">
+				<img class="logo" src="img/logo-Bnregio.jpg">
+			    <h2 class="txtFolio">Tu folio es:</h2>
+				<h1 class="folio">R-142285543</h1>
+			</div>
 		</div>
 
 
@@ -140,7 +141,7 @@ form2.addEventListener('submit', e => {
 	 
 })
 
-	function miMensaje() {
+function miMensaje() {
   var element = document.getElementById("registro");
     element.classList.remove("activo");
   var element = document.getElementById("exito");
@@ -150,12 +151,23 @@ form2.addEventListener('submit', e => {
 }	
 
 function miMensaje2() {
+	setTimeout(folioReporte, 5000);
   var element = document.getElementById("registro2");
     element.classList.remove("activo");
   var element = document.getElementById("exito2");
     element.classList.add("activo");	
 }
-</script>	
 
-	</body>
-	</html>
+
+function folioReporte(){
+  console.log("Hola Mundo");
+  var element = document.getElementById("exito2");
+    element.classList.remove("activo");	
+  var element = document.getElementById("exito3");
+    element.classList.add("activo");
+	
+}
+		
+</script>	
+</body>
+</html>
